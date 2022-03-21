@@ -1,0 +1,6 @@
+.DS_Store
+.ipynb*
+*.db
+__pycache__
+.pytest_cache
+
