@@ -22,6 +22,7 @@ Likewise, the ORM, Transaction will mirror the database with
 columns:
 amount, category, date (yyyymmdd), description
 
+
 In place of SQL queries, we will have method calls.
 
 This app will store the data in a SQLite database ~/tracker.db
@@ -31,12 +32,13 @@ could be replaced with PostgreSQL or Pandas or straight python lists
 
 '''
 
-#from transactions import Transaction
+from transactions import Transaction
 from category import Category
 import sys
 
-#transactions = Transaction('tracker.db')
+transactions = Transaction('tracker.db')
 category = Category('tracker.db')
+
 
 
 # here is the menu for the tracker app
@@ -57,10 +59,9 @@ menu = '''
 '''
 
 
-
-
 def process_choice(choice):
-
+    global transactions
+    global category
     if choice=='0':
         return
     elif choice=='1':
@@ -78,6 +79,64 @@ def process_choice(choice):
         desc = input("new category description: ")
         cat = {'name':name, 'desc':desc}
         category.update(rowid,cat)
+    elif choice=='4':
+        tsn = transactions.show_transactions()
+        print_transactions(tsn)
+    elif choice == '5':
+        amount = int(input("amount:"))
+        ctgry = input("category:") 
+        date = input("date:") 
+        description = input("description:") 
+        transaction = {'amount':amount, 'category':ctgry,
+            'date':date, 'description':description}
+        transactions.add_transactions(transaction)
+        cat = {'name':ctgry, 'desc':description}
+        category.add(cat)
+    elif choice == '6':
+        item_num = input("item_num:")
+        transactions.del_transactions(item_num)
+
+
+
+    #prompt user for specific dates/months/category/time frame
+    elif choice == '7':
+        bgn = input("start date (yyyymmdd):  ")
+        end = input("end date (yyyymmdd):   ")
+        tsn = transactions.print_sum_date(bgn, end)
+        print_transactions(tsn)
+        total = transactions.date_total(bgn, end)
+        if total != None:
+            print("%-10s %-10d"%("Total:", total))
+        print("")
+    elif choice == '8':
+        month = input("month (mm):  ")
+        tsn = transactions.print_sum_month(month)
+        print_transactions(tsn)
+        total = transactions.month_total(month)
+        if total != None:
+            print("%-10s %-10d"%("Total:", total))
+        print("")
+    elif choice == '9':
+        year = input("year (yyyy):  ")
+        tsn = transactions.print_sum_year(year)
+        print_transactions(tsn)
+        total = transactions.year_total(year)
+        if total != None:
+            print("%-10s %-10d"%("Total:", total))
+        print("")
+    elif choice == '10':
+        sum_cat = input("category:  ")
+        tsn = transactions.print_sum_cat(sum_cat)
+        print_transactions(tsn)    
+        total = transactions.cat_total(cat)
+        if total != None:
+            print("%-10s %-10d"%("Total:", total))
+        print("")
+    elif choice == '11':
+        print(menu)
+    elif choice == '':
+        choice = input("> ")
+        return(choice)
     else:
         print("choice",choice,"not yet implemented")
 
@@ -102,20 +161,23 @@ def toplevel():
 def print_transactions(items):
     ''' print the transactions '''
     if len(items)==0:
-        print('no items to print')
+        print('no transactions to print')
         return
     print('\n')
-    print("%-10s %-10d %-10s %-10d %-30s"%(
-        'item #','amount','category','date','description'))
-    print('-'*40)
+    print("%-10s %-10s %-10s %-10s %-30s"%(
+        'item_num','amount','category','date','description'))
+    print('-'*60)
     for item in items:
         values = tuple(item.values()) 
-        print("%-10s %-10d %-10s %-10d %-30s"%values)
+        print("%-10d %-10d %-10s %-10d %-30s"%values)
 
 def print_category(cat):
     print("%-3d %-10s %-30s"%(cat['rowid'],cat['name'],cat['desc']))
 
 def print_categories(cats):
+    if len(cats)==0:
+        print('no categories to print')
+        return
     print("%-3s %-10s %-30s"%("id","name","description"))
     print('-'*45)
     for cat in cats:

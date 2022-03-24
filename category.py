@@ -67,8 +67,8 @@ class Category():
         return last_rowid[0]
 
     def update(self,rowid,item):
-        ''' add a category to the categories table.
-            this returns the rowid of the inserted element
+        ''' update a category in the categories table.
+            # this returns the rowid of the inserted element
         '''
         con= sqlite3.connect(self.dbfile)
         cur = con.cursor()
@@ -80,7 +80,7 @@ class Category():
         con.close()
 
     def delete(self,rowid):
-        ''' add a category to the categories table.
+        ''' delete a category from the categories table.
             this returns the rowid of the inserted element
         '''
         con= sqlite3.connect(self.dbfile)
