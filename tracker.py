@@ -27,23 +27,20 @@ In place of SQL queries, we will have method calls.
 
 This app will store the data in a SQLite database ~/tracker.db
 
-Note the actual implementation of the ORM is hidden and so it 
+Note the actual implementation of the ORM is hidden and so it
 could be replaced with PostgreSQL or Pandas or straight python lists
 
 '''
 
 from transactions import Transaction
 from category import Category
-import sys
 
-transactions = Transaction('tracker.db')
-category = Category('tracker.db')
-
-
+TRANSACTION = Transaction('tracker.db')
+CATEGORY = Category('tracker.db')
 
 # here is the menu for the tracker app
 
-menu = '''
+MENU = '''
 0. quit
 1. show categories
 2. add category
@@ -58,13 +55,11 @@ menu = '''
 11. print this menu
 '''
 
-
 def process_choice(choice):
-    global transactions
-    global category
-    if choice=='0':
-        return
-    elif choice=='1':
+    '''prompts user for their menu choice'''
+    transaction = TRANSACTION
+    category = CATEGORY
+    if choice=='1':
         cats = category.select_all()
         print_categories(cats)
     elif choice=='2':
@@ -80,84 +75,61 @@ def process_choice(choice):
         cat = {'name':name, 'desc':desc}
         category.update(rowid,cat)
     elif choice=='4':
-        tsn = transactions.show_transactions()
-        print_transactions(tsn)
+        print_transactions(transaction.show_transactions())
     elif choice == '5':
-        amount = int(input("amount:"))
-        ctgry = input("category:") 
-        date = input("date:") 
-        description = input("description:") 
-        transaction = {'amount':amount, 'category':ctgry,
+        amount = int(input("amount: "))
+        ctgry = input("category: ")
+        date = input("date: ")
+        description = input("description: ")
+        tran = {'amount':amount, 'category':ctgry,
             'date':date, 'description':description}
-        transactions.add_transactions(transaction)
+        transaction.add(tran)
         cat = {'name':ctgry, 'desc':description}
         category.add(cat)
     elif choice == '6':
-        item_num = input("item_num:")
-        transactions.del_transactions(item_num)
-
-
-
-    #prompt user for specific dates/months/category/time frame
+        item_num = input("item_num: ")
+        transaction.delete(item_num)
+        print('DELETE CORRELATING CATEGORY ')
+        cats = category.select_all()
+        print_categories(cats)
+        row = input("category rowid: ")
+        category.delete(row)
     elif choice == '7':
-        bgn = input("start date (yyyymmdd):  ")
-        end = input("end date (yyyymmdd):   ")
-        tsn = transactions.print_sum_date(bgn, end)
-        print_transactions(tsn)
-        total = transactions.date_total(bgn, end)
-        if total != None:
-            print("%-10s %-10d"%("Total:", total))
-        print("")
+        bgn = input("start date (yyyymmdd): ")
+        end = input("end date (yyyymmdd): ")
+        print_transactions(transaction.print_sum_date(bgn, end))
+        total = transaction.date_total(bgn, end)
+        print("%-10s %-10d"%("Total:", total))
     elif choice == '8':
-        month = input("month (mm):  ")
-        tsn = transactions.print_sum_month(month)
-        print_transactions(tsn)
-        total = transactions.month_total(month)
-        if total != None:
-            print("%-10s %-10d"%("Total:", total))
-        print("")
+        month = input("month (mm): ")
+        print_transactions(transaction.print_sum_month(month))
+        total = transaction.month_total(month)
+        print("%-10s %-10d"%("Total:", total))
     elif choice == '9':
-        year = input("year (yyyy):  ")
-        tsn = transactions.print_sum_year(year)
-        print_transactions(tsn)
-        total = transactions.year_total(year)
-        if total != None:
-            print("%-10s %-10d"%("Total:", total))
-        print("")
+        year = input("year (yyyy): ")
+        print_transactions(transaction.print_sum_year(year))
+        total = transaction.year_total(year)
+        print("%-10s %-10d"%("Total:", total))
     elif choice == '10':
-        sum_cat = input("category:  ")
-        tsn = transactions.print_sum_cat(sum_cat)
-        print_transactions(tsn)    
-        total = transactions.cat_total(cat)
-        if total != None:
-            print("%-10s %-10d"%("Total:", total))
-        print("")
+        sum_cat = input("category: ")
+        print_transactions(transaction.print_sum_cat(sum_cat))
+        total = transaction.cat_total(sum_cat)
+        print("%-10s %-10d"%("Total:", total))
     elif choice == '11':
-        print(menu)
-    elif choice == '':
-        choice = input("> ")
-        return(choice)
-    else:
-        print("choice",choice,"not yet implemented")
-
+        print(MENU)
     choice = input("> ")
-    return(choice)
-
+    return process_choice(choice)
 
 def toplevel():
-    ''' handle the user's choice '''
-
-    ''' read the command args and process them'''
-    print(menu)
+    ''' handle the user's choice
+        read the command args and process them'''
+    print(MENU)
     choice = input("> ")
-    while choice !='0' :
+    while choice !='0':
         choice = process_choice(choice)
     print('bye')
 
-#
 # here are some helper functions
-#
-
 def print_transactions(items):
     ''' print the transactions '''
     if len(items)==0:
@@ -168,13 +140,15 @@ def print_transactions(items):
         'item_num','amount','category','date','description'))
     print('-'*60)
     for item in items:
-        values = tuple(item.values()) 
+        values = tuple(item.values())
         print("%-10d %-10d %-10s %-10d %-30s"%values)
 
 def print_category(cat):
+    '''prints data for each category'''
     print("%-3d %-10s %-30s"%(cat['rowid'],cat['name'],cat['desc']))
 
 def print_categories(cats):
+    '''prints each category in categories table'''
     if len(cats)==0:
         print('no categories to print')
         return
@@ -183,8 +157,5 @@ def print_categories(cats):
     for cat in cats:
         print_category(cat)
 
-
 # here is the main call!
-
 toplevel()
-

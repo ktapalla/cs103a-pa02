@@ -51,7 +51,7 @@ def med_db(small_db):
         small_db.delete(rowids[j])
 
 
-
+@pytest.mark.category
 @pytest.mark.simple
 def test_to_cat_dict():
     ''' teting the to_cat_dict function '''
@@ -61,7 +61,7 @@ def test_to_cat_dict():
     assert a['desc']=='testdesc'
     assert len(a.keys())==3
 
-
+@pytest.mark.category
 @pytest.mark.add
 def test_add(med_db):
     ''' add a category to db, the select it, then delete it'''
@@ -77,7 +77,7 @@ def test_add(med_db):
     assert cat1['name']==cat0['name']
     assert cat1['desc']==cat0['desc']
 
-
+@pytest.mark.category
 @pytest.mark.delete
 def test_delete(med_db):
     ''' add a category to db, delete it, and see that the size changes'''
@@ -98,6 +98,7 @@ def test_delete(med_db):
     assert len(cats0)==len(cats2)
     assert len(cats2) == len(cats1)-1
 
+@pytest.mark.category
 @pytest.mark.update
 def test_update(med_db):
     ''' add a category to db, updates it, and see that it changes'''
