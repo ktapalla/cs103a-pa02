@@ -59,7 +59,9 @@ def process_choice(choice):
     '''prompts user for their menu choice'''
     transaction = TRANSACTION
     category = CATEGORY
-    if choice=='1':
+    if choice == '0':
+        return
+    elif choice=='1':
         cats = category.select_all()
         print_categories(cats)
     elif choice=='2':
@@ -118,7 +120,7 @@ def process_choice(choice):
     elif choice == '11':
         print(MENU)
     choice = input("> ")
-    return process_choice(choice)
+    return(choice)
 
 def toplevel():
     ''' handle the user's choice

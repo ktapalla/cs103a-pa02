@@ -1,0 +1,739 @@
+Script started on Fri Mar 25 00:15:56 2022
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(base) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hcconda en  activate cs0 103a[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hlls[?2004l
+README.md		test_category.py	transactions.py
+category.py		test_transaction.py	typescript
+pytest.ini		tracker.py
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hppython tracker.py[?2004l
+
+0. quit
+1. show categories
+2. add category
+3. modify category
+4. show transactions
+5. add transaction
+6. delete transaction
+7. summarize transactions by date
+8. summarize transactions by month
+9. summarize transactions by year
+10. summarize transactions by category
+11. print this menu
+
+> 1
+no categories to print
+> 4
+no transactions to print
+> 5
+amount: 100
+category: food
+date: 20220325 5
+description: groceries
+> 5
+amount: 200
+category: travel
+date: 22 0220306
+description: flight
+> 60  5
+amount: 60
+category: travel
+date: 02  20220306
+description: uber
+> 5
+amount: 150
+category: bills
+date: 20210601
+description: rent
+> 5
+amount: 150   70
+category: food
+date: 20220213
+description: vday din
+> 5
+amount: 100
+category: bills
+date: 2022\1   10606
+description: power
+> 5
+amount: 60
+category: bills
+date: 2022 1  19
+description: 0 error
+> 11
+
+0. quit
+1. show categories
+2. add category
+3. modify category
+4. show transactions
+5. add transaction
+6. delete transaction
+7. summarize transactions by date
+8. summarize transactions by month
+9. summarize transactions by year
+10. summarize transactions by category
+11. print this menu
+
+> 6
+item_num: 7
+DELETE CORRELATING CATEGORY 
+id  name       description                   
+---------------------------------------------
+1   food       groceries                     
+2   travel     flight                        
+3   travel     uber                          
+4   bills      rent                          
+5   food       vday din                      
+6   bills      power                         
+7   bills      error                         
+category rowid: 7
+> 5
+amount: 60  100
+category: food
+date: 20181012 3
+description: bday din
+> 5
+amount: 30  20
+category: ent
+date: 20220202  22
+description: mvoie    ovies
+> 15  5
+amount: 15
+category: ent
+date: 201 20 1  1201    1001
+description: netflix
+> 4
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+1          100        food       20220325   groceries                     
+2          200        travel     20220306   flight                        
+3          60         travel     20220306   uber                          
+4          150        bills      20210601   rent                          
+5          70         food       20220213   vday din                      
+6          100        bills      20210606   power                         
+7          100        food       20181013   bday din                      
+8          20         ent        20220222   movies                        
+9          15         ent        20211001   netflix                       
+> 1
+id  name       description                   
+---------------------------------------------
+1   food       groceries                     
+2   travel     flight                        
+3   travel     uber                          
+4   bills      rent                          
+5   food       vday din                      
+6   bills      power                         
+7   food       bday din                      
+8   ent        movies                        
+9   ent        netflix                       
+> 2
+category name: ent   travek l
+category description: gas
+> 2
+category name: food
+category description: brunch
+> 2
+category name: bills
+category description: water
+> 1
+id  name       description                   
+---------------------------------------------
+1   food       groceries                     
+2   travel     flight                        
+3   travel     uber                          
+4   bills      rent                          
+5   food       vday din                      
+6   bills      power                         
+7   food       bday din                      
+8   ent        movies                        
+9   ent        netflix                       
+10  travel     gas                           
+11  food       brunch                        
+12  bills      water                         
+> 3
+modifying category
+rowid: 4
+new category name: bills
+new category description: monthly rent
+> 2
+category name: travel  
+category description: train     lyft
+> 1
+id  name       description                   
+---------------------------------------------
+1   food       groceries                     
+2   travel     flight                        
+3   travel     uber                          
+4   bills      monthly rent                  
+5   food       vday din                      
+6   bills      power                         
+7   food       bday din                      
+8   ent        movies                        
+9   ent        netflix                       
+10  travel     gas                           
+11  food       brunch                        
+12  bills      water                         
+13  travel     lyft                          
+> 7
+start date (yyyymmdd): 20220  10601
+end date (yyyymmdd): 20220228
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+4          150        bills      20210601   rent                          
+5          70         food       20220213   vday din                      
+6          100        bills      20210606   power                         
+8          20         ent        20220222   movies                        
+9          15         ent        20211001   netflix                       
+Total:     355       
+> 4
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+1          100        food       20220325   groceries                     
+2          200        travel     20220306   flight                        
+3          60         travel     20220306   uber                          
+4          150        bills      20210601   rent                          
+5          70         food       20220213   vday din                      
+6          100        bills      20210606   power                         
+7          100        food       20181013   bday din                      
+8          20         ent        20220222   movies                        
+9          15         ent        20211001   netflix                       
+> 8
+month (mm): 10
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+7          100        food       20181013   bday din                      
+9          15         ent        20211001   netflix                       
+Total:     115       
+> 8
+month (mm): 06
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+4          150        bills      20210601   rent                          
+6          100        bills      20210606   power                         
+Total:     250       
+> 8
+month (mm): 02
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+5          70         food       20220213   vday din                      
+8          20         ent        20220222   movies                        
+Total:     90        
+> 9
+year (yyyy): 2018
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+7          100        food       20181013   bday din                      
+Total:     100       
+> 9
+year (yyyy): 2020
+no transactions to print
+Traceback (most recent call last):
+  File "/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02/tracker.py", line 163, in <module>
+    toplevel()
+  File "/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02/tracker.py", line 131, in toplevel
+    choice = process_choice(choice)
+  File "/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02/tracker.py", line 114, in process_choice
+    print("%-10s %-10d"%("Total:", total))
+TypeError: %d format: a real number is required, not NoneType
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hppython    p  [?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hppyth  p  lls[?2004l
+README.md		test_category.py	transactions.py
+__pycache__		test_transaction.py	typescript
+category.py		tracker.db
+pytest.ini		tracker.py
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hppython tracker.py[?2004l
+
+0. quit
+1. show categories
+2. add category
+3. modify category
+4. show transactions
+5. add transaction
+6. delete transaction
+7. summarize transactions by date
+8. summarize transactions by month
+9. summarize transactions by year
+10. summarize transactions by category
+11. print this menu
+
+> 4
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+1          100        food       20220325   groceries                     
+2          200        travel     20220306   flight                        
+3          60         travel     20220306   uber                          
+4          150        bills      20210601   rent                          
+5          70         food       20220213   vday din                      
+6          100        bills      20210606   power                         
+7          100        food       20181013   bday din                      
+8          20         ent        20220222   movies                        
+9          15         ent        20211001   netflix                       
+> 9
+year (yyyy): 2021
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+4          150        bills      20210601   rent                          
+6          100        bills      20210606   power                         
+9          15         ent        20211001   netflix                       
+Total:     265       
+> 9
+year (yyyy): 2022
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+1          100        food       20220325   groceries                     
+2          200        travel     20220306   flight                        
+3          60         travel     20220306   uber                          
+5          70         food       20220213   vday din                      
+8          20         ent        20220222   movies                        
+Total:     450       
+> 9 10
+category: travel
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+2          200        travel     20220306   flight                        
+3          60         travel     20220306   uber                          
+Total:     260       
+> 10
+category: bills
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+4          150        bills      20210601   rent                          
+6          100        bills      20210606   power                         
+Total:     250       
+> 10
+category: ent
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+8          20         ent        20220222   movies                        
+9          15         ent        20211001   netflix                       
+Total:     35        
+> 10
+category: food
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+1          100        food       20220325   groceries                     
+5          70         food       20220213   vday din                      
+7          100        food       20181013   bday din                      
+Total:     270       
+> 11
+
+0. quit
+1. show categories
+2. add category
+3. modify category
+4. show transactions
+5. add transaction
+6. delete transaction
+7. summarize transactions by date
+8. summarize transactions by month
+9. summarize transactions by year
+10. summarize transactions by category
+11. print this menu
+
+> 7 4
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+1          100        food       20220325   groceries                     
+2          200        travel     20220306   flight                        
+3          60         travel     20220306   uber                          
+4          150        bills      20210601   rent                          
+5          70         food       20220213   vday din                      
+6          100        bills      20210606   power                         
+7          100        food       20181013   bday din                      
+8          20         ent        20220222   movies                        
+9          15         ent        20211001   netflix                       
+> 7
+start date (yyyymmdd): 20210601
+end date (yyyymmdd): 20210307^[[D^[[D^[[D                 20607   307
+
+
+item_num   amount     category   date       description                   
+------------------------------------------------------------
+2          200        travel     20220306   flight                        
+3          60         travel     20220306   uber                          
+4          150        bills      20210601   rent                          
+5          70         food       20220213   vday din                      
+6          100        bills      20210606   power                         
+8          20         ent        20220222   movies                        
+9          15         ent        20211001   netflix                       
+Total:     615       
+> 11
+
+0. quit
+1. show categories
+2. add category
+3. modify category
+4. show transactions
+5. add transaction
+6. delete transaction
+7. summarize transactions by date
+8. summarize transactions by month
+9. summarize transactions by year
+10. summarize transactions by category
+11. print this menu
+
+> 0
+bye
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hppylint transactions.py[?2004l
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpylint transactions.py[1C.py .py .py .py .py .py .py .py .py c.pyk.pye.pyr.py[?2004l
+************* Module tracker
+tracker.py:123:0: C0325: Unnecessary parens after 'return' keyword (superfluous-parens)
+tracker.py:58:0: R0914: Too many local variables (21/15) (too-many-locals)
+tracker.py:62:4: R1705: Unnecessary "elif" after "return" (no-else-return)
+tracker.py:104:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tracker.py:109:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tracker.py:114:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tracker.py:119:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tracker.py:58:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+tracker.py:58:0: R0915: Too many statements (62/50) (too-many-statements)
+tracker.py:141:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tracker.py:146:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tracker.py:150:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tracker.py:157:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------------------------------------
+Your code has been rated at 8.65/10 (previous run: 8.65/10, +0.00)
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hppytest     p  lls -l[?2004l
+total 168
+-rw-r--r--@ 1 kirsten  staff     59 Mar 21 16:53 README.md
+drwxr-xr-x  4 kirsten  staff    128 Mar 25 00:16 __pycache__
+-rw-rw-r--@ 1 kirsten  staff   2917 Mar 24 02:01 category.py
+-rw-rw-r--@ 1 kirsten  staff     60 Mar 16 10:10 pytest.ini
+-rw-rw-r--@ 1 kirsten  staff   3266 Mar 24 09:20 test_category.py
+-rw-r--r--  1 kirsten  staff  13139 Mar 24 09:20 test_transaction.py
+-rw-r--r--  1 kirsten  staff  12288 Mar 25 00:24 tracker.db
+-rw-rw-r--  1 kirsten  staff   4880 Mar 25 00:12 tracker.py
+-rw-r--r--  1 kirsten  staff   6315 Mar 24 08:28 transactions.py
+-rw-r--r--  1 kirsten  staff  21945 Mar 25 00:32 typescript
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hppytest test_transaction.py[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 21 items                                                             [0m
+
+test_transaction.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                [100%][0m
+
+[32m============================== [32m[1m21 passed[0m[32m in 0.48s[0m[32m ==============================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest test_transaction.py                   -v -m print[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 14 deselected / 11 selected                               [0m
+
+test_transaction.py::test_to_transaction_dict [32mPASSED[0m[32m                     [  9%][0m
+test_transaction.py::test_select_one [32mPASSED[0m[32m                              [ 18%][0m
+test_transaction.py::test_show_transactions [32mPASSED[0m[32m                       [ 27%][0m
+test_transaction.py::test_print_sum_date_small [32mPASSED[0m[32m                    [ 36%][0m
+test_transaction.py::test_print_sum_date_med [32mPASSED[0m[32m                      [ 45%][0m
+test_transaction.py::test_print_sum_month_small [32mPASSED[0m[32m                   [ 54%][0m
+test_transaction.py::test_print_sum_month_med [32mPASSED[0m[32m                     [ 63%][0m
+test_transaction.py::test_print_sum_year_small [32mPASSED[0m[32m                    [ 72%][0m
+test_transaction.py::test_print_sum_year_med [32mPASSED[0m[32m                      [ 81%][0m
+test_transaction.py::test_print_sum_cat_small [32mPASSED[0m[32m                     [ 90%][0m
+test_transaction.py::test_print_sum_cat_med [32mPASSED[0m[32m                       [100%][0m
+
+[32m====================== [32m[1m11 passed[0m, [33m14 deselected[0m[32m in 0.30s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m print     data[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 23 deselected / 2 selected                                [0m
+
+test_transaction.py::test_add [32mPASSED[0m[32m                                     [ 50%][0m
+test_transaction.py::test_delete [32mPASSED[0m[32m                                  [100%][0m
+
+[32m======================= [32m[1m2 passed[0m, [33m23 deselected[0m[32m in 0.09s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m data    simple[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 3 deselected / 22 selected                                [0m
+
+test_category.py::test_to_cat_dict [32mPASSED[0m[32m                                [  4%][0m
+test_transaction.py::test_to_transaction_dict [32mPASSED[0m[32m                     [  9%][0m
+test_transaction.py::test_select_one [32mPASSED[0m[32m                              [ 13%][0m
+test_transaction.py::test_show_transactions [32mPASSED[0m[32m                       [ 18%][0m
+test_transaction.py::test_add [32mPASSED[0m[32m                                     [ 22%][0m
+test_transaction.py::test_delete [32mPASSED[0m[32m                                  [ 27%][0m
+test_transaction.py::test_print_sum_date_small [32mPASSED[0m[32m                    [ 31%][0m
+test_transaction.py::test_print_sum_date_med [32mPASSED[0m[32m                      [ 36%][0m
+test_transaction.py::test_date_total_small [32mPASSED[0m[32m                        [ 40%][0m
+test_transaction.py::test_date_total_med [32mPASSED[0m[32m                          [ 45%][0m
+test_transaction.py::test_print_sum_month_small [32mPASSED[0m[32m                   [ 50%][0m
+test_transaction.py::test_print_sum_month_med [32mPASSED[0m[32m                     [ 54%][0m
+test_transaction.py::test_month_total_small [32mPASSED[0m[32m                       [ 59%][0m
+test_transaction.py::test_month_total_med [32mPASSED[0m[32m                         [ 63%][0m
+test_transaction.py::test_print_sum_year_small [32mPASSED[0m[32m                    [ 68%][0m
+test_transaction.py::test_print_sum_year_med [32mPASSED[0m[32m                      [ 72%][0m
+test_transaction.py::test_year_total_small [32mPASSED[0m[32m                        [ 77%][0m
+test_transaction.py::test_year_total_med [32mPASSED[0m[32m                          [ 81%][0m
+test_transaction.py::test_print_sum_cat_small [32mPASSED[0m[32m                     [ 86%][0m
+test_transaction.py::test_print_sum_cat_med [32mPASSED[0m[32m                       [ 90%][0m
+test_transaction.py::test_cat_total [32mPASSED[0m[32m                               [ 95%][0m
+test_transaction.py::test_cat_total_med [32mPASSED[0m[32m                           [100%][0m
+
+[32m======================= [32m[1m22 passed[0m, [33m3 deselected[0m[32m in 0.47s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m simple      cal[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 13 deselected / 12 selected                               [0m
+
+test_transaction.py::test_print_sum_date_small [32mPASSED[0m[32m                    [  8%][0m
+test_transaction.py::test_print_sum_date_med [32mPASSED[0m[32m                      [ 16%][0m
+test_transaction.py::test_date_total_small [32mPASSED[0m[32m                        [ 25%][0m
+test_transaction.py::test_date_total_med [32mPASSED[0m[32m                          [ 33%][0m
+test_transaction.py::test_print_sum_month_small [32mPASSED[0m[32m                   [ 41%][0m
+test_transaction.py::test_print_sum_month_med [32mPASSED[0m[32m                     [ 50%][0m
+test_transaction.py::test_month_total_small [32mPASSED[0m[32m                       [ 58%][0m
+test_transaction.py::test_month_total_med [32mPASSED[0m[32m                         [ 66%][0m
+test_transaction.py::test_print_sum_year_small [32mPASSED[0m[32m                    [ 75%][0m
+test_transaction.py::test_print_sum_year_med [32mPASSED[0m[32m                      [ 83%][0m
+test_transaction.py::test_year_total_small [32mPASSED[0m[32m                        [ 91%][0m
+test_transaction.py::test_year_total_med [32mPASSED[0m[32m                          [100%][0m
+
+[32m====================== [32m[1m12 passed[0m, [33m13 deselected[0m[32m in 0.28s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m cal   date[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 21 deselected / 4 selected                                [0m
+
+test_transaction.py::test_print_sum_date_small [32mPASSED[0m[32m                    [ 25%][0m
+test_transaction.py::test_print_sum_date_med [32mPASSED[0m[32m                      [ 50%][0m
+test_transaction.py::test_date_total_small [32mPASSED[0m[32m                        [ 75%][0m
+test_transaction.py::test_date_total_med [32mPASSED[0m[32m                          [100%][0m
+
+[32m======================= [32m[1m4 passed[0m, [33m21 deselected[0m[32m in 0.11s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m date    month[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 21 deselected / 4 selected                                [0m
+
+test_transaction.py::test_print_sum_month_small [32mPASSED[0m[32m                   [ 25%][0m
+test_transaction.py::test_print_sum_month_med [32mPASSED[0m[32m                     [ 50%][0m
+test_transaction.py::test_month_total_small [32mPASSED[0m[32m                       [ 75%][0m
+test_transaction.py::test_month_total_med [32mPASSED[0m[32m                         [100%][0m
+
+[32m======================= [32m[1m4 passed[0m, [33m21 deselected[0m[32m in 0.11s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m month     year[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 21 deselected / 4 selected                                [0m
+
+test_transaction.py::test_print_sum_year_small [32mPASSED[0m[32m                    [ 25%][0m
+test_transaction.py::test_print_sum_year_med [32mPASSED[0m[32m                      [ 50%][0m
+test_transaction.py::test_year_total_small [32mPASSED[0m[32m                        [ 75%][0m
+test_transaction.py::test_year_total_med [32mPASSED[0m[32m                          [100%][0m
+
+[32m======================= [32m[1m4 passed[0m, [33m21 deselected[0m[32m in 0.12s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m year    add[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 23 deselected / 2 selected                                [0m
+
+test_category.py::test_add [32mPASSED[0m[32m                                        [ 50%][0m
+test_transaction.py::test_add [32mPASSED[0m[32m                                     [100%][0m
+
+[32m======================= [32m[1m2 passed[0m, [33m23 deselected[0m[32m in 0.09s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m add   delete[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 23 deselected / 2 selected                                [0m
+
+test_category.py::test_delete [32mPASSED[0m[32m                                     [ 50%][0m
+test_transaction.py::test_delete [32mPASSED[0m[32m                                  [100%][0m
+
+[32m======================= [32m[1m2 passed[0m, [33m23 deselected[0m[32m in 0.09s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m delete      simple[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 3 deselected / 22 selected                                [0m
+
+test_category.py::test_to_cat_dict [32mPASSED[0m[32m                                [  4%][0m
+test_transaction.py::test_to_transaction_dict [32mPASSED[0m[32m                     [  9%][0m
+test_transaction.py::test_select_one [32mPASSED[0m[32m                              [ 13%][0m
+test_transaction.py::test_show_transactions [32mPASSED[0m[32m                       [ 18%][0m
+test_transaction.py::test_add [32mPASSED[0m[32m                                     [ 22%][0m
+test_transaction.py::test_delete [32mPASSED[0m[32m                                  [ 27%][0m
+test_transaction.py::test_print_sum_date_small [32mPASSED[0m[32m                    [ 31%][0m
+test_transaction.py::test_print_sum_date_med [32mPASSED[0m[32m                      [ 36%][0m
+test_transaction.py::test_date_total_small [32mPASSED[0m[32m                        [ 40%][0m
+test_transaction.py::test_date_total_med [32mPASSED[0m[32m                          [ 45%][0m
+test_transaction.py::test_print_sum_month_small [32mPASSED[0m[32m                   [ 50%][0m
+test_transaction.py::test_print_sum_month_med [32mPASSED[0m[32m                     [ 54%][0m
+test_transaction.py::test_month_total_small [32mPASSED[0m[32m                       [ 59%][0m
+test_transaction.py::test_month_total_med [32mPASSED[0m[32m                         [ 63%][0m
+test_transaction.py::test_print_sum_year_small [32mPASSED[0m[32m                    [ 68%][0m
+test_transaction.py::test_print_sum_year_med [32mPASSED[0m[32m                      [ 72%][0m
+test_transaction.py::test_year_total_small [32mPASSED[0m[32m                        [ 77%][0m
+test_transaction.py::test_year_total_med [32mPASSED[0m[32m                          [ 81%][0m
+test_transaction.py::test_print_sum_cat_small [32mPASSED[0m[32m                     [ 86%][0m
+test_transaction.py::test_print_sum_cat_med [32mPASSED[0m[32m                       [ 90%][0m
+test_transaction.py::test_cat_total [32mPASSED[0m[32m                               [ 95%][0m
+test_transaction.py::test_cat_total_med [32mPASSED[0m[32m                           [100%][0m
+
+[32m======================= [32m[1m22 passed[0m, [33m3 deselected[0m[32m in 0.47s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m simple      total[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 17 deselected / 8 selected                                [0m
+
+test_transaction.py::test_date_total_small [32mPASSED[0m[32m                        [ 12%][0m
+test_transaction.py::test_date_total_med [32mPASSED[0m[32m                          [ 25%][0m
+test_transaction.py::test_month_total_small [32mPASSED[0m[32m                       [ 37%][0m
+test_transaction.py::test_month_total_med [32mPASSED[0m[32m                         [ 50%][0m
+test_transaction.py::test_year_total_small [32mPASSED[0m[32m                        [ 62%][0m
+test_transaction.py::test_year_total_med [32mPASSED[0m[32m                          [ 75%][0m
+test_transaction.py::test_cat_total [32mPASSED[0m[32m                               [ 87%][0m
+test_transaction.py::test_cat_total_med [32mPASSED[0m[32m                           [100%][0m
+
+[32m======================= [32m[1m8 passed[0m, [33m17 deselected[0m[32m in 0.19s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m total     data[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 23 deselected / 2 selected                                [0m
+
+test_transaction.py::test_add [32mPASSED[0m[32m                                     [ 50%][0m
+test_transaction.py::test_delete [32mPASSED[0m[32m                                  [100%][0m
+
+[32m======================= [32m[1m2 passed[0m, [33m23 deselected[0m[32m in 0.09s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m data    cat[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 21 deselected / 4 selected                                [0m
+
+test_transaction.py::test_print_sum_cat_small [32mPASSED[0m[32m                     [ 25%][0m
+test_transaction.py::test_print_sum_cat_med [32mPASSED[0m[32m                       [ 50%][0m
+test_transaction.py::test_cat_total [32mPASSED[0m[32m                               [ 75%][0m
+test_transaction.py::test_cat_total_med [32mPASSED[0m[32m                           [100%][0m
+
+[32m======================= [32m[1m4 passed[0m, [33m21 deselected[0m[32m in 0.11s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m cat    small[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 16 deselected / 9 selected                                [0m
+
+test_transaction.py::test_select_one [32mPASSED[0m[32m                              [ 11%][0m
+test_transaction.py::test_print_sum_date_small [32mPASSED[0m[32m                    [ 22%][0m
+test_transaction.py::test_date_total_small [32mPASSED[0m[32m                        [ 33%][0m
+test_transaction.py::test_print_sum_month_small [32mPASSED[0m[32m                   [ 44%][0m
+test_transaction.py::test_month_total_small [32mPASSED[0m[32m                       [ 55%][0m
+test_transaction.py::test_print_sum_year_small [32mPASSED[0m[32m                    [ 66%][0m
+test_transaction.py::test_year_total_small [32mPASSED[0m[32m                        [ 77%][0m
+test_transaction.py::test_print_sum_cat_small [32mPASSED[0m[32m                     [ 88%][0m
+test_transaction.py::test_cat_total [32mPASSED[0m[32m                               [100%][0m
+
+[32m======================= [32m[1m9 passed[0m, [33m16 deselected[0m[32m in 0.18s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004hpytest -v -m small     med[?2004l
+[1m============================= test session starts ==============================[0m
+platform darwin -- Python 3.10.2, pytest-6.2.4, py-1.9.0, pluggy-0.13.1 -- /opt/miniconda3/envs/cs103a/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02, configfile: pytest.ini
+plugins: anyio-3.5.0
+[1mcollecting ... [0m[1mcollected 25 items / 15 deselected / 10 selected                               [0m
+
+test_transaction.py::test_select_one [32mPASSED[0m[32m                              [ 10%][0m
+test_transaction.py::test_show_transactions [32mPASSED[0m[32m                       [ 20%][0m
+test_transaction.py::test_print_sum_date_med [32mPASSED[0m[32m                      [ 30%][0m
+test_transaction.py::test_date_total_med [32mPASSED[0m[32m                          [ 40%][0m
+test_transaction.py::test_print_sum_month_med [32mPASSED[0m[32m                     [ 50%][0m
+test_transaction.py::test_month_total_med [32mPASSED[0m[32m                         [ 60%][0m
+test_transaction.py::test_print_sum_year_med [32mPASSED[0m[32m                      [ 70%][0m
+test_transaction.py::test_year_total_med [32mPASSED[0m[32m                          [ 80%][0m
+test_transaction.py::test_print_sum_cat_med [32mPASSED[0m[32m                       [ 90%][0m
+test_transaction.py::test_cat_total_med [32mPASSED[0m[32m                           [100%][0m
+
+[32m====================== [32m[1m10 passed[0m, [33m15 deselected[0m[32m in 0.30s[0m[32m =======================[0m
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Kirstens-MacBook-Pro.local/Users/kirsten/Desktop/School/Semesters/Spring2022/Cosi103aSE/GivenFiles/cs103a-pa02/pa02[0m[27m[24m[J(cs103a) kirsten@Kirstens-MacBook-Pro pa02 % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+Script done on Fri Mar 25 00:38:10 2022
