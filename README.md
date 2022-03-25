@@ -1,4 +1,3 @@
 # cs103a-pa02
 
-PA02: tracker.py and the Transaction class
-
+This appilication is a Transaction tracker. A menu is provided indicating how to select options/features of the application. Transactions can be added, deleted, shown, and summarized. Transactions can be sorted/summarized by date (promts for date range), month (promts for month), year (prompts for year), and category (prompts for category). Summaries show transactions included and the total amount spent for said transactions. Transactions contain amount, category, date, and description information. Categories can be added, modified, and shown. 
